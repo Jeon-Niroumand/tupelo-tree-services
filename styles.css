@@ -37,6 +37,12 @@ nav ul li a {
     padding: 2rem;
 }
 
+h2 img{
+    width: 22px;
+    margin-left: 22px;
+    margin-bottom: -2px;
+    margin-right: -20px;
+}
 section {
     padding: 4rem 0;
 }
