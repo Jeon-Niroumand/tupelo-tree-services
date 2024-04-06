@@ -1,0 +1,23 @@
+.parallax {
+    perspective: 1px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  
+  .layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .layer:nth-child(1) { transform: translateZ(-1px) scale(2); }
+  .layer:nth-child(2) { transform: translateZ(-2px) scale(2); }
+  .layer:nth-child(3) { transform: translateZ(-3px) scale(2); }
+  
+  .layer svg {
+    display: block;
+    margin: auto;
+  }  
