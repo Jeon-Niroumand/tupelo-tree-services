@@ -21,6 +21,7 @@ header {
 h1 img {
     display: inline-flex;
     width: 75px;
+    height: 75px;
 }
 
 div.container img {
