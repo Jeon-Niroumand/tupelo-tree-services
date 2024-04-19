@@ -1,0 +1,120 @@
+.webmadewell {
+  background-color: white;
+}
+body { 
+  margin-inline: 0;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+}
+.sample-header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-image: url("http://webmadewell.com/wp-content/uploads/2018/01/img-bg-sample-parallax-header.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.sample-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: MidnightBlue;
+  opacity: 0.3;
+}
+.sample-header-section {
+  position: relative;
+  padding: 15% 0 10%;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  font-family: "Montserrat", sans-serif;
+}
+h1 {
+  font-weight: 500;
+}
+h2 {
+  font-weight: 400;
+}
+nav {
+  position: absolute;
+  bottom: 0;
+  left: 0; /* Align to the left */
+  width: 100%; /* Take full width of the header */
+}
+nav ul {
+  list-style: none;
+  display: flex; /* Change to flex layout */
+  justify-content: flex-start; /* Align items to the left */
+  padding-left: 0; /* Remove default padding */
+}
+nav ul li {
+  margin-right: 20px;
+}
+nav ul li:last-child {
+  margin-right: 0; /* Remove margin from the last item */
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+nav ul li a:hover {
+  background-color: #3a7a2f;
+  color: #98d66d;
+}
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+}
+.sample-section-wrap {
+  position: relative;
+  background-color: #f8f8f8; /* Light gray background */
+}
+.sample-section {
+  position: relative;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+}
+section#about img {
+  width: 100px;
+}
+section#contact img {
+  width: 22px;
+  margin-left: 22px;
+  margin-bottom: -2px;
+  margin-right: -20px;
+}
+form input,
+form textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+
+form button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+}
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

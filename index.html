@@ -4,57 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tupelo Tree Service</title>
-    <link rel="stylesheet" href="./style1.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/parallax.js"></script>
 </head>
+<div class="sample-header">
+    <div class="sample-header-section">
+    <h1>Tupelo Tree Service</h1>
+    <h2>Veteran Owned, Serving North Missippi Since 2021</h2>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    </div>
+</div>
 <body>
-    <header>
-        <h1><img src="./giedd_logo.png" alt="Giedd logo">Tupelo Tree Service</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="about">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor libero et nibh placerat, vel luctus ligula sodales. Integer eu eros eget justo 
-            convallis lacinia.</p>
-            <img src="./vosb.png">
+    <div class="sample-section-wrap">
+        <div class="sample-section">
+            <section id="about">
+                <div class="container">
+                    <h2>About Us</h2>
+                    <p>Giedd Enterprise Tree Service has been serving North Mississippi with pride and dedication since 2021. We are your trusted local partner for all 
+                       your tree service needs. With our commitment to excellence and personalized service, we strive to deliver exceptional results and make a positive
+                       impact on our community.</p>
+                    <p>At Giedd Enterprise, we understand the unique needs and values of North Mississippi. We are experienced professionals who take the time to
+                       listen to your specific requirements and tailor our services to meet your expectations. Make a request today, we have you covered!</p>
+                    <p><b>Why choose Giedd Enterprise Tree Service?</b></p>
+                    <ul>
+                        <li>Local Expertise: As a business rooted in North Mississippi, we are familiar with the region's culture, environment, and needs. We are
+                            dedicated to providing solutions that resonate with our community.</li><br>
+                        <li>Exceptional Quality: We hold ourselves to the highest standards of quality and craftsmanship, ensuring that you receive top-notch service
+                            every time.</li><br>
+                        <li>Personalized Service: Your satisfaction is our priority. We take a personalized approach to every project, offering customized solutions that
+                            fit your specific needs.</li><br>
+                        <li>Reliability and Trust: Our reputation is built on trust and reliability. We strive to exceed your expectations and earn your confidence with
+                            every interaction.</li>
+                    </ul>
+                    <img src="./img/vosb.png" alt="veteran owned small business logo">
+                </div>
+            </section>
+            <section id="services">
+                <div class="container">
+                    <h2>Our Services</h2>
+                    <ul>
+                        <li><b>Tree Removal</b></li>
+                        <li><b>Pruning</b></li>
+                        <li><b>Stump Grinding</b></li>
+                        <li><b>Disaster Relief</b></li>
+                        <li><b>Debris Hauling</b></li>
+                        <li><b>Right of Way clearing</b></li>
+                        <li><b>Government contract work</b></li>
+                        <li><b>Cabling and Bracing</b> (<em>please inquire</em>)</li>
+                    </ul>
+                </div>
+            </section>
+            <section id="contact">
+                <div class="container">
+                    <h2>Contact Us <a href="https://www.facebook.com/GieddEnterpriseLLC" target="_blank"><img src="./img/Facebook_Logo_Primary.png" alt="link to facebook"></a>
+                    <a href="tel:+16624019730"><img src="./img/phone-call.png" alt="call us 16624019730"></a>
+                    </h2>
+                    <form action="send_email.php" method="POST">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" placeholder="Your Message" required></textarea>
+                        <button type="submit">Send</button>
+                    </form>            
+                </div>
+            </section>
         </div>
-    </section>
-
-    <section id="services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <ul>
-                <li>Tree Trimming</li>
-                <li>Tree Removal</li>
-                <li>Stump Grinding</li>
-                <li>Pruning</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Us <a href="https://www.facebook.com/GieddEnterpriseLLC" target="_blank"><img src="./Facebook_Logo_Primary.png" alt="link to facebook"></a>
-            <a href="tel:+16624019730"><img src="./phone-call.png" alt="call us 16624019730">
-            </h2>
-            <form action="send_email.php" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send</button>
-            </form>            
-        </div>
-    </section>
-
-    <footer>
-        <p>Copyright &#169 Tupelo Tree Service <script>document.write(new Date().getFullYear())</script></p>
-    </footer>
+        <footer>
+            <p>Copyright &#169 Tupelo Tree Service <script>document.write(new Date().getFullYear())</script></p>
+        </footer>
+    </div>
 </body>
 </html>
