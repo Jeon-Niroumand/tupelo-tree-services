@@ -11,8 +11,8 @@ body {
   left: 0;
   top: 0;
   width: 100%;
-  background-image: url("http://webmadewell.com/wp-content/uploads/2018/01/img-bg-sample-parallax-header.jpg");
-  background-position: center;
+  background-image: url("../img/cutting\ wood\ for\ site.jpg");
+  background-position: center 38%;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -28,7 +28,7 @@ body {
 }
 .sample-header-section {
   position: relative;
-  padding: 15% 0 10%;
+  padding: 1% 0 1%; /* Adjusted padding */
   max-width: 640px;
   margin-left: auto;
   margin-right: auto;
@@ -36,11 +36,30 @@ body {
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
   font-family: "Montserrat", sans-serif;
 }
+.sample-header-section img {
+  max-width: 300px; /* Adjust as needed */
+  }
+.sample-header-section nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sample-header-section nav ul li {
+  display: inline;
+  margin-left: 20px; /* Adjust as needed */
+}
+
+.sample-header-section nav ul li:first-child {
+  margin-left: 0; /* Removes margin for the first item */
+}
 h1 {
   font-weight: 500;
+  padding-left: 6px;
 }
 h2 {
   font-weight: 400;
+  padding-left: 6px;
 }
 nav {
   position: absolute;
@@ -90,11 +109,10 @@ nav ul li a:hover {
 section#about img {
   width: 100px;
 }
-section#contact img {
+#contact img {
   width: 22px;
-  margin-left: 22px;
   margin-bottom: -2px;
-  margin-right: -20px;
+  padding-left: 10px; 
 }
 form input,
 form textarea {
