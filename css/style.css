@@ -1,21 +1,24 @@
 .webmadewell {
   background-color: white;
 }
+
 body { 
   margin-inline: 0;
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
 }
+
 .sample-header {
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
-  background-image: url("../img/cutting\ wood\ for\ site.jpg");
+  background-image: url("../img/cutting wood for site.jpg");
   background-position: center 38%;
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .sample-header::before {
   content: "";
   position: absolute;
@@ -26,79 +29,80 @@ body {
   background-color: MidnightBlue;
   opacity: 0.3;
 }
+
 .sample-header-section {
   position: relative;
-  padding: 1% 0 1%; /* Adjusted padding */
+  padding: 1% 0; /* Adjusted padding */
   max-width: 640px;
   margin-left: auto;
   margin-right: auto;
   color: white;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
   font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: flex-start; /* Align items to the left */
 }
+
 .sample-header-section img {
   max-width: 300px; /* Adjust as needed */
-  }
+}
+
 .sample-header-section nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  justify-content: flex-start; /* Align items to the left */
 }
 
 .sample-header-section nav ul li {
-  display: inline;
-  margin-left: 20px; /* Adjust as needed */
+  margin: 0px; /* Adjust margin to create space between items */
+  
 }
 
 .sample-header-section nav ul li:first-child {
   margin-left: 0; /* Removes margin for the first item */
 }
+
 h1 {
   font-weight: 500;
-  padding-left: 6px;
+  padding-left: 20px; /* Increased padding */
+  font-size: 2.5rem; /* Adjusted font size */
+  margin-bottom: 10px; /* Add margin */
 }
+
 h2 {
   font-weight: 400;
-  padding-left: 6px;
+  padding-left: 20px; /* Increased padding */
+  font-size: 1.8rem; /* Adjusted font size */
+  margin-bottom: 20px; /* Add margin */
 }
-nav {
-  position: absolute;
-  bottom: 0;
-  left: 0; /* Align to the left */
-  width: 100%; /* Take full width of the header */
-}
-nav ul {
-  list-style: none;
-  display: flex; /* Change to flex layout */
-  justify-content: flex-start; /* Align items to the left */
-  padding-left: 0; /* Remove default padding */
-}
-nav ul li {
-  margin-right: 20px;
-}
-nav ul li:last-child {
-  margin-right: 0; /* Remove margin from the last item */
-}
+
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  font-size: 1.2rem;
-  padding: 5px 10px;
+  font-size: 1rem; /* Adjusted font size */
+  padding: 5px 20px; /* Adjusted padding */
   border-radius: 10px;
 }
+
 nav ul li a:hover {
   background-color: #3a7a2f;
   color: #98d66d;
 }
+
 .container {
   max-width: 800px;
   margin: auto;
   padding: 2rem;
 }
+
 .sample-section-wrap {
   position: relative;
   background-color: #f8f8f8; /* Light gray background */
 }
+
 .sample-section {
   position: relative;
   max-width: 640px;
@@ -106,27 +110,31 @@ nav ul li a:hover {
   margin-right: auto;
   padding: 40px;
 }
+
 section#about img {
   width: 100px;
 }
+
 #contact img {
   width: 22px;
   margin-bottom: -2px;
   padding-left: 10px; 
 }
+
 form input,
 form textarea {
-    width: 100%;
-    margin-bottom: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
 form button {
-    background: #333;
-    color: #fff;
-    border: none;
-    padding: 0.75rem 1rem;
-    cursor: pointer;
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
 }
+
 footer {
   background: #333;
   color: #fff;
@@ -135,6 +143,7 @@ footer {
   bottom: 0;
   width: 100%;
 }
+
 
 #fs-frm input,
 #fs-frm select,
