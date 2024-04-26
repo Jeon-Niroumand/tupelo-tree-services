@@ -13,7 +13,7 @@ body {
   left: 0;
   top: 0;
   width: 100%;
-  background-image: url("../img/cutting wood for site.jpg");
+  background-image: url("../img/cutting wood for site.webp");
   background-position: center 38%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -78,13 +78,14 @@ h2 {
   font-size: 1.8rem; /* Adjusted font size */
   margin-bottom: 20px; /* Add margin */
 }
-
 nav ul li a {
+  display: flex;
   color: #fff;
   text-decoration: none;
   font-size: 1rem; /* Adjusted font size */
-  padding: 5px 20px; /* Adjusted padding */
   border-radius: 10px;
+  text-wrap: nowrap;
+  margin-left: 15px;
 }
 
 nav ul li a:hover {
@@ -93,9 +94,7 @@ nav ul li a:hover {
 }
 
 .container {
-  max-width: 800px;
   margin: auto;
-  padding: 2rem;
 }
 
 .sample-section-wrap {
@@ -112,7 +111,10 @@ nav ul li a:hover {
 }
 
 section#about img {
+  display: block;
   width: 100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #contact img {
