@@ -13,10 +13,6 @@ body {
   left: 0;
   top: 0;
   width: 100%;
-  background-image: url("../img/IMG_20240415_090545458.webp");
-  background-position: center 38%;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .sample-header::before {
@@ -26,7 +22,6 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: MidnightBlue;
   opacity: 0.3;
 }
 
