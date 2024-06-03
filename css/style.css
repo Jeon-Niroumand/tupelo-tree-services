@@ -154,7 +154,9 @@ footer {
   text-align: center;
 }
 
-
+p {
+  margin-bottom: auto;
+}
 #fs-frm input,
 #fs-frm select,
 #fs-frm textarea,
