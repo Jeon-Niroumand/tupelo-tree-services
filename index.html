@@ -14,14 +14,19 @@
     <script src="./js/parallax.js"></script>
 </head>
 <div class="sample-header">
-    <style>
+    <!-- Load the stylesheet that will reference the LCP image. -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Preload the LCP image with a high fetchpriority so it starts loading with the stylesheet. -->
+    <link rel="preload" fetchpriority="high" as="image" href="../img/IMG_20240415_090545458.webp" type="image/webp">
+    <!-- style>
         .sample-header {
               background-image: url("../img/IMG_20240415_090545458.webp");
               background-position: center 40%;
               background-size: cover;
               background-repeat: no-repeat;
         }        
-    </style>
+    </style -->
     <div class="sample-header-section">
     <img src="./img/headerpic.png" alt="Giedd Enterprise Logo">
     <h1>Giedd Enterprise Tree Service</h1>
