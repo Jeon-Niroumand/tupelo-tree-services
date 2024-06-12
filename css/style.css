@@ -80,6 +80,7 @@ h2 {
 nav ul li a {
   display: flex;
   color: #fff;
+  background-color: #4B5C33;
   text-decoration: none;
   font-size: 1rem; /* Adjusted font size */
   border-radius: 10px;
