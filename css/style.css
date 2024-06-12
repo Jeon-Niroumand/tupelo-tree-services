@@ -118,7 +118,7 @@ section#about img {
 
 div.scroll-container {
   background-color: #f8f8f8;
-  overflow: auto;
+  overflow: scroll;
   white-space: nowrap;
   padding: 10px;
 }
