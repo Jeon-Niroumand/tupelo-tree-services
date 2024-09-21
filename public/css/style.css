@@ -1,0 +1,270 @@
+.webmadewell {
+  background-color: white;
+}
+
+body { 
+  margin-inline: 0;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+}
+
+.sample-header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-image: url("../img/IMG_20240415_090545458.webp");
+  background-position: center 40%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sample-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.3;
+}
+
+.sample-header-section {
+  position: relative;
+  padding: 1% 0; /* Adjusted padding */
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: flex-start; /* Align items to the left */
+}
+
+.sample-header-section img {
+  max-width: 300px; /* Adjust as needed */
+}
+
+.sample-header-section nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-start; /* Align items to the left */
+}
+
+.sample-header-section nav ul li {
+  margin: 0px; /* Adjust margin to create space between items */
+  
+}
+
+.sample-header-section nav ul li:first-child {
+  margin-left: 0; /* Removes margin for the first item */
+}
+
+h1 {
+  font-weight: 500;
+  padding-left: 20px; /* Increased padding */
+  font-size: 2.5rem; /* Adjusted font size */
+  margin-bottom: 10px; /* Add margin */
+}
+
+h2 {
+  font-weight: 400;
+  padding-left: 20px; /* Increased padding */
+  font-size: 1.8rem; /* Adjusted font size */
+  margin-bottom: 20px; /* Add margin */
+}
+nav ul li a {
+  display: flex;
+  color: #fff;
+  background-color: #4B5C33;
+  text-decoration: none;
+  font-size: 1rem; /* Adjusted font size */
+  border-radius: 10px;
+  text-wrap: nowrap;
+  margin-left: 15px;
+}
+
+nav ul li a:hover {
+  background-color: #3a7a2f;
+  color: #98d66d;
+}
+
+.container {
+  margin: auto;
+}
+
+.sample-section-wrap {
+  position: relative;
+  background-color: #f8f8f8; /* Light gray background */
+}
+
+.sample-section {
+  position: relative;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+}
+
+section#about img {
+  display: block;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.scroll-container {
+  background-color: #f8f8f8;
+  overflow: scroll;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+div.scroll-container img {
+  padding: 10px;
+}
+
+#contact img {
+  width: 22px;
+  margin-bottom: -2px;
+  padding-left: 10px; 
+}
+
+form input,
+form textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+form button {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+}
+
+p {
+  margin-bottom: auto;
+}
+#fs-frm input,
+#fs-frm select,
+#fs-frm textarea,
+#fs-frm fieldset,
+#fs-frm optgroup,
+#fs-frm label,
+#fs-frm #card-element:disabled {
+  font-family: inherit;
+  font-size: 100%;
+  color: inherit;
+  border: none;
+  border-radius: 0;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+#fs-frm label,
+#fs-frm legend,
+#fs-frm ::placeholder {
+  font-size: .825rem;
+  margin-bottom: .5rem;
+  padding-top: .2rem;
+  display: flex;
+  align-items: baseline;
+}
+
+/* border, padding, margin, width */
+#fs-frm input,
+#fs-frm select,
+#fs-frm textarea,
+#fs-frm #card-element {
+  border: 1px solid rgba(0,0,0,0.2);
+  background-color: rgba(255,255,255,0.9);
+  padding: .75em 1rem;
+  margin-bottom: 1.5rem;
+}
+#fs-frm input:focus,
+#fs-frm select:focus,
+#fs-frm textarea:focus {
+  background-color: white;
+  outline-style: solid;
+  outline-width: thin;
+  outline-color: gray;
+  outline-offset: -1px;
+}
+#fs-frm [type="text"],
+#fs-frm [type="email"] {
+  width: 100%;
+}
+#fs-frm [type="button"],
+#fs-frm [type="submit"],
+#fs-frm [type="reset"] {
+  width: auto;
+  cursor: pointer;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+}
+#fs-frm [type="button"]:focus,
+#fs-frm [type="submit"]:focus,
+#fs-frm [type="reset"]:focus {
+  outline: none;
+}
+#fs-frm [type="submit"],
+#fs-frm [type="reset"] {
+  margin-bottom: 0;
+}
+#fs-frm select {
+  text-transform: none;
+}
+
+#fs-frm [type="checkbox"] {
+  -webkit-appearance: checkbox;
+  -moz-appearance: checkbox;
+  appearance: checkbox;
+  display: inline-block;
+  width: auto;
+  margin: 0 .5em 0 0 !important;
+}
+
+#fs-frm [type="radio"] {
+  -webkit-appearance: radio;
+  -moz-appearance: radio;
+  appearance: radio;
+}
+
+/* address, locale */
+#fs-frm fieldset.locale input[name="city"],
+#fs-frm fieldset.locale select[name="state"],
+#fs-frm fieldset.locale input[name="postal-code"] {
+  display: inline;
+}
+#fs-frm fieldset.locale input[name="city"] {
+  width: 52%;
+}
+#fs-frm fieldset.locale select[name="state"],
+#fs-frm fieldset.locale input[name="postal-code"] {
+  width: 20%;
+}
+#fs-frm fieldset.locale input[name="city"],
+#fs-frm fieldset.locale select[name="state"] {
+  margin-right: 3%;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+}

@@ -1,0 +1,20 @@
+<section id="contact">
+    <div class="container">
+        <h2>Contact Us <a href="https://www.facebook.com/GieddEnterpriseLLC" target="_blank"><img src="./img/Facebook_Logo_Primary.png" alt="link to facebook"></a>
+        <a href="tel:+16624019730"><img src="./img/phone-call.png" alt="call us 16624019730"></a>
+        </h2>
+        <%- include("partials/errors.ejs") %>
+        <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="/contact" method="POST">
+            <fieldset id="fs-frm-inputs">
+            <label for="full-name">Full Name</label>
+            <input type="text" name="full-name" id="full-name" placeholder="First and Last" required="">
+            <label for="email-address">Email Address</label>
+            <input type="email" name="email-address" id="email-address" placeholder="Your Email Address" required="">
+            <label for="message">Message</label>
+            <textarea rows="5" name="message" id="message" placeholder="Please let us know your request here. We'll get back right away." required=""></textarea>
+            <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+            </fieldset>
+            <input type="submit" value="Submit">
+        </form>            
+    </div>
+</section>
