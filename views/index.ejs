@@ -7,8 +7,8 @@
     exceptional tree removal, pruning, stump grinding, and government contract work.<a href='#contact'> Contact us</a> today for personalized service tailored 
     to your needs.">
     <title>Giedd Enterprise Tree Service</title>
-    <link rel="icon" href="./public/img/favicon.png">
-    <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="icon" href="../public/img/favicon.png">
+    <link rel="stylesheet" href="../public/css/style.css">
     <link rel="canonical" href="https://tupelotree.services">
     <script src="./js/jquery.min.js"></script>
     <script src="./js/parallax.js"></script>
@@ -122,6 +122,19 @@
             </section>
             <%- include('contact', { errors: errors, formData: formData }) %>
         </div>
+        <div id="tracking-notice" class="tracking-notice">
+            This site is protected by reCAPTCHA and the Google 
+            <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a> and 
+            <a href="https://policies.google.com/terms" target="_blank">Terms of Service</a> apply.
+            <button id="close-notice" class="close-notice">Got it</button>
+        </div>
+                    
+        <script>
+            document.getElementById('close-notice').onclick = function() {
+            document.getElementById('tracking-notice').style.display = 'none';
+            };
+        </script>
+          
         <footer>
             <p>Copyright &#169 Giedd Enterprise LLC <script>document.write(new Date().getFullYear())</script></p>
         </footer>
