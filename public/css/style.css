@@ -77,6 +77,11 @@ h2 {
   font-size: 1.8rem; /* Adjusted font size */
   margin-bottom: 20px; /* Add margin */
 }
+
+h2 a {
+  text-decoration: none;
+}
+
 nav ul li a {
   display: flex;
   color: #fff;
