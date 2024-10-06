@@ -6,16 +6,18 @@ const fs = require('fs');
 const auth = require('./auth');
 const { downloadFile, uploadFile, handleFileUpdate, getAuthClient } = require('./uploadFile');
 const dotenv = require('dotenv');
-require('dotenv').config(); // To manage sensitive info like email credentials
+require('dotenv').config();
 const { body, validationResult } = require("express-validator");
 const os = require('os');
 const app = express();
+const { DateTime } = require('luxon');
 
 // Validation middleware
 const alphaErr = "must only contain letters.";
 const lengthErr = "must be between 1 and 30 characters.";
 const emailErr = "must be a valid email address.";
 const bioErr = "must be less than 250 characters.";
+const phoneErr = "must be in the format 123-456-7890."
 
 const validateUser = [
   body("full-name").trim()
@@ -27,7 +29,10 @@ const validateUser = [
     .normalizeEmail(),
 
   body("message").trim()
-    .isLength({ min: 0, max: 250 }).withMessage(`Message ${bioErr}`)
+    .isLength({ min: 0, max: 250 }).withMessage(`Message ${bioErr}`),
+
+  body("phone").trim().optional({ checkFalsy: true })
+    .matches(/^\d{3}-\d{3}-\d{4}$/).withMessage("Phone number must be in the format 123-456-7890.")
 ];
 
 // Set the view engine to EJS
@@ -79,7 +84,7 @@ app.post('/contact', validateUser, async (req, res) => {
       return res.status(400).send('reCAPTCHA verification failed. Please try again.');
     }
 
-    const { 'full-name': name, 'email-address': email, message } = req.body;
+    const { 'full-name': name, 'email-address': email, phone, message } = req.body;
   
     // Setup Nodemailer transport
     const transporter = nodemailer.createTransport({
@@ -98,11 +103,13 @@ app.post('/contact', validateUser, async (req, res) => {
       text: `You have a new message from: \n
              Name: ${name} \n
              Email: ${email} \n
+             Phone: ${phone} \n
              Message: "${message.replace(/"/g, '""')}"`
     };
 
     // Create data to append to CSV
-    const data = `${name},${email},"${message.replace(/"/g, '""')}"\n`;
+    const timestamp = DateTime.now().setZone('America/Chicago').toFormat('yyyy-MM-dd HH:mm:ss'); // Make a timesamp for central time (Tupelo)
+    const data = `${name},${email},${phone || 'N/A'},"${message.replace(/"/g, '""')}",${timestamp}\n`;
     const csvFile = path.join(__dirname, './contacts.csv'); // Use os.tmpdir() for a writable temporary path (fixes bug caused by docker deployment)
     if (!fs.existsSync(path.dirname(csvFile))) {
       fs.mkdirSync(path.dirname(csvFile), { recursive: true });
@@ -124,7 +131,7 @@ app.post('/contact', validateUser, async (req, res) => {
         // Download existing Google Drive file, append data, and re-upload
         try {
           const googleDriveFileId = '1B6yrswba-UE_10E8OQuHwbCB4rFJyz8c';  // Replace with your actual file ID
-          const newData = `${name},${email},"${message.replace(/"/g, '""')}"\n`;
+          const newData = `${name},${email},${phone || 'N/A'},"${message.replace(/"/g, '""')}",${timestamp}\n`;
         
           // Handle download, append, and upload
           await handleFileUpdate(googleDriveFileId, newData);

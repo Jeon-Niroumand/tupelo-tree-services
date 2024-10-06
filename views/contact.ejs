@@ -18,6 +18,9 @@
                 <label for="email-address">Email Address</label>
                 <input type="email" name="email-address" id="email-address" placeholder="Your Email Address" required>
 
+                <label for="phone">Phone Number</label>
+                <input type="tel" name="phone" id="phone" placeholder="123-456-7890 (Optional)" oninput="formatPhoneNumber(this)">
+
                 <label for="message">Message</label>
                 <textarea rows="5" name="message" id="message" placeholder="Please let us know your request here. We'll get back right away." required></textarea>
 
@@ -31,6 +34,20 @@
     </div>
 </section>
 
+<script>
+    function formatPhoneNumber(input) {
+        const cleaned = ('' + input.value).replace(/\D/g, '');
+        const match = cleaned.match(/^(\d{0,3})(\d{0,3})(\d{0,4})$/);
+        if (match) {
+            input.value = [
+                match[1],
+                match[2] ? '-' + match[2] : '',
+                match[3] ? '-' + match[3] : ''
+            ].join('');
+        }
+}
+</script>
+    
 <!-- Include reCAPTCHA v3 script -->
 <script src="https://www.google.com/recaptcha/api.js?render=<%= recaptchaSiteKey %>"></script>
 
